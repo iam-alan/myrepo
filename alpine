@@ -1,0 +1,6 @@
+FROM alpine
+RUN apk update
+RUN apk add apache2
+EXPOSE 80
+COPY ./index.html /var/www/localhost/htdocs
+CMD ["/usr/sbin/httpd","-D","FOREGROUND"] 

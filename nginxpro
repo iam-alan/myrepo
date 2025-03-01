@@ -1,0 +1,4 @@
+FROM jc21/nginx-proxy-manager
+EXPOSE 80
+EXPOSE 81
+EXPOSE 443
