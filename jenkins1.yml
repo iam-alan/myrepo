@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jenkins-pod
+  labels:
+    app: jenkins
+spec:
+  containers:
+  - name: jenkins
+    image: jenkins/jenkins:lts
+    ports:
+    - containerPort: 8080
+    - containerPort: 50000
+    env:
+      - name: JENKINS_OPTS
+        value: "--httpPort=8080"
+  restartPolicy: Always
