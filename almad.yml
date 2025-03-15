@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alma-deployment4
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: dep4
+  template:
+    metadata:
+      labels:
+        app: dep4
+    spec:
+      containers:
+      - name: alma-container4
+        image: almalinux
+        command: ["sleep","infinity"]

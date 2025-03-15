@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alp-deployment5
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: dep5
+  template:
+    metadata:
+      labels:
+        app: dep5
+    spec:
+      containers:
+      - name: alp-container5
+        image: alpine
+        command: ["sleep","infinity"]

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: alma-pod
+  labels:
+     app: dep2
+spec:
+  containers:
+  - name: alma-container1
+    image: almalinux
+    command: ["sleep","infinity"]                                                   

@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ubuntu-deployment3
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: dep3
+  template:
+    metadata:
+      labels:
+        app: dep3
+    spec:
+      containers:
+      - name: ubuntu-container3
+        image: ubuntu
+        command: ["sleep","infinity"]
